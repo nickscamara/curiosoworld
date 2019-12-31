@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
+
 class Header extends StatelessWidget {
+  String title;
+  String subtitle;
+
+  Header(this.title,this.subtitle);
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -9,13 +14,13 @@ class Header extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              "O que você procura hoje?",
+              subtitle,
               style: TextStyle(fontSize: 12, color: Colors.white),
             ),
             Row(
               children: <Widget>[
                 Text(
-                  "Curiosidades",
+                  title,
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700,color: Colors.white),
                 ),
                 Icon(Icons.arrow_drop_down, color: Colors.white)
